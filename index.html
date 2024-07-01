@@ -11,14 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>The Village Lodge</title>
     <link rel="shortcut icon" href="images/favicon.jpeg" type="image/jpeg">
+</head>
 <body>
     <main>
         <nav>
-            <ul>
+            <div class="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="menu.html" title="Our Menu">Menu</a></li>
                 <li><a href="#contact" title="Contact Us">Contact Us</a></li>
-                <li><a href="https://www.facebook.com/vlvillagelodge/?locale=en_GB" title="FaceBook">Facebook</a>></li>
+                <li><a href="https://www.facebook.com/vlvillagelodge/?locale=en_GB" title="FaceBook">Facebook</a></li>
             </ul>
         </nav>
     </main>
@@ -34,9 +40,7 @@
             <p>5.00pm - 11pm</p></a>
         </div>
     </article>
-    <div class="patch">
-
-    </div>
+    <div class="patch"></div>
     <section class="info">
         <div>
             <h2>The First Indian Restaurant In The Village</h2>
@@ -71,7 +75,6 @@
             <input type="text" placeholder="Message" class="Item4">
             <button title="Send" class="Item5">Send</button>
         </div>
-
     </div>
     <footer>
         <div class="footer">
@@ -86,5 +89,17 @@
             <p>Every night 5pm - 11pm</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.burger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+        });
+    </script>
 </body>
 </html>
